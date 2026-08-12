@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Gerador de Senhas</h1>
+    <p>Gere senhas fortes e seguras em segundos</p>
+
+    <!-- Senha -->
+    <div class="senha-box">
+        <input type="text" id="senha" readonly value="hshol7r-yr8727l ey37rr8t73ttt2723">
+    </div>
+
+    <!-- Força -->
+    <div class="forca">
+        <span>Força da senha:</span>
+        <strong>Muito Forte</strong>
+
+        <div class="barra">
+            <div class="nivel ativo"></div>
+            <div class="nivel ativo"></div>
+            <div class="nivel ativo"></div>
+        </div>
+    </div>
+
+    <!-- Opções -->
+    <div class="opcoes">
+
+        <!-- Tamanho -->
+        <div class="card">
+
+            <h2>Tamanho de Senha</h2>
+
+            <div class="slider-box">
+                <span>16</span>
+
+                <input
+                    type="range"
+                    min="8"
+                    max="32"
+                    value="16"
+                    id="tamanho">
+
+                <span>32</span>
+            </div>
+
+            <p>Comprimento: <span id="valor">16</span> caracteres</p>
+
+        </div>
+
+        <!-- Caracteres -->
+        <div class="card">
+
+            <h2>Incluir caracteres</h2>
+
+            <label>
+                <input type="checkbox" checked>
+                A-Z — Letras maiúsculas
+            </label>
+
+            <label>
+                <input type="checkbox" checked>
+                a-z — Letras minúsculas
+            </label>
+
+            <label>
+                <input type="checkbox" checked>
+                0-9 — Números
+            </label>
+
+            <label>
+                <input type="checkbox" checked>
+                !@# — Símbolos
+            </label>
+
+        </div>
+
+    </div>
+
+    <!-- Dica -->
+    <div class="dica">
+
+        <h3>Dica de segurança</h3>
+
+        <p>Use senhas únicas e fortes para proteger suas contas.</p>
+
+    </div>
+
+</div>
+
+<script>
+const tamanho = document.getElementById("tamanho");
+const valor = document.getElementById("valor");
+
+tamanho.addEventListener("input", () => {
+    valor.textContent = tamanho.value;
+});
+</script>
+
+</body>
+</html>
